@@ -9,6 +9,7 @@ export default function User() {
       {session ? (
         <>
           <img
+            referrerPolicy="no-referrer"
             className="rounded-full hover:bg-gray-200 h-12 cursor-pointer p-1"
             onClick={signOut}
             alt="user-image"
