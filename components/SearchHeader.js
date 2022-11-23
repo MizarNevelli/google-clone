@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import Search from "../icons/Search";
 import { search } from "../utils/utils";
+import SearchHeaderOptions from "./SearchHeaderOptions";
 import User from "./User";
 
 export default function SearchHeader() {
@@ -52,6 +53,7 @@ export default function SearchHeader() {
         </form>
         <User className="ml-auto whitespace-nowrap" />
       </div>
+      <SearchHeaderOptions />
     </header>
   );
 }
