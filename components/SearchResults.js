@@ -1,11 +1,13 @@
+import Pagination from "./Pagination";
+
 export default function SearchResults({ results }) {
   return (
     <div className="w-full mx-auto px-3 sm:pl[5%] md:pl-[14%] lg:pl-52">
       <p className="text-gray-600 text-sm mb-5 mt-3">
-        About {results.searchInformation.formattedTotalResults} results (
-        {results.searchInformation.searchTime.toFixed(3)} seconds)
+        About {results?.searchInformation?.formattedTotalResults} results (
+        {results?.searchInformation?.searchTime.toFixed(3)} seconds)
       </p>
-      {results.items.map((item) => (
+      {results?.items?.map((item) => (
         <div key={item.link} className="max-w-xl mb-8 ">
           <div className="group ">
             <a className="text-sm truncate" href={item.link}>
@@ -26,6 +28,7 @@ export default function SearchResults({ results }) {
           />
         </div>
       ))}
+      <Pagination />
     </div>
   );
 }
