@@ -22,8 +22,8 @@ export default function search({ results }) {
 export async function getServerSideProps(context) {
   const startIndex = context.query.start || "1";
   console.log("context.query", context.query);
-  const mockData = true;
-  const data = mockData
+  const useMockData = true;
+  const data = useMockData
     ? fakeResults
     : await fetch(
         `https://www.googleapis.com/customsearch/v1?key=${
